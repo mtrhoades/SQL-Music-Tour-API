@@ -1,21 +1,22 @@
+'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('bands', {
-        band_id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
+      band_id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: Sequelize.INTEGER
       },
-      band_name: {
+      name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      band_genre: {
+      genre: {
         type: Sequelize.TEXT,
         allowNull: false,
       },
-      start_time: {
+      available_start_time: {
         type: Sequelize.DATE,
         allowNull: false,
       },
